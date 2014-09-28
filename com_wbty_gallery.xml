@@ -7,7 +7,7 @@
     <author>Webity</author>
     <authorEmail>info@makethewebwork.com</authorEmail>
     <authorUrl>http://www.makethewebwork.com</authorUrl>
-    <version>0.2.1</version>
+    <version>0.3.0.2</version>
     <description>A component for displaying images.</description>
 
     <install> <!-- Runs on install -->
@@ -46,7 +46,7 @@
         <!-- Need to add image still <menu img="media/wbty_gallery/img/s_com_wbty_gallery.png" >com_wbty_gallery</menu>-->
 		<menu>com_wbty_gallery</menu>
         <submenu>
-			
+
         </submenu>
         <files folder="administrator">
 			<filename>access.xml</filename>
@@ -75,9 +75,9 @@
             <schemapath type="mysql">sql/updates/mysql</schemapath>
         </schemas>
     </update>
-	
+
 	<scriptfile>script.wbty_gallery.php</scriptfile>
-    
+
     <updateservers>
         <server type="extension" priority="1" name="Wbty_gallery Updates">http://wbty.co/com_wbty_gallery.xml</server>
     </updateservers>
