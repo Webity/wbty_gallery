@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="component"
+		label="COM_WBTY_GALLERY_COMPONENT_LABEL"
+		description="COM_WBTY_GALLERY_COMPONENT_DESC"
+		addfieldpath="/administrator/components/com_wbty_gallery/models/fields"
+	>
+
+        <field name="pricing"
+             type="dependency"
+             default="0"
+			 extension="com_wbty_pricing"
+             label="Enable Pricing"
+             description="Requires Wbty Checkout">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+         </field>
+
+        <field name="stock_manager"
+             type="dependency"
+             default="0"
+			 extension="com_wbty_pricing"
+             label="Enable Stock Manager"
+             description="Requires Pricing Enabled">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+         </field>
+
+        <field name="custom_fields"
+             type="dependency"
+             default="0"
+			 extension="com_wbty_custom_fields"
+             label="Enable Custom Fields"
+             description="Requires Wbty Custom Fields; Allows you to add fields easily to an individual item or image.">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+         </field>
+
+	</fieldset>
+	<fieldset name="component2"
+		label="Slideshow Settings"
+		description="COM_WBTY_GALLERY_COMPONENT_DESC"
+	>
+		<field type="list" name="includeJquery" label="Include jQuery" default="1" description="jQuery is required, but may already be included in your template.">
+			<option value='0'>No</option>
+			<option value='1'>Yes</option>
+		</field>
+		<field type="list" name="jqueryMethod" label="Load jQuery Method" default="1" description="Load a local or CDN version?">
+			<option value='0'>Google CDN</option>
+			<option value='1'>Local Copy</option>
+		</field>
+		
+		<field type="spacer" name="break1" hr="true" />
+		
+		<field type="text" name="width" label="Width" default="600" description="Width of Slider" class="" size="" />
+		<field type="text" name="height" label="Height" default="" description="Height of Slider - leave empty for auto height" class="" size="" />
+		
+		<field type="list" name="fx" label="Animation Type" default="fade" description="Sets the transition between slides" class="" size="">
+			<option value='blindX'>Blind X</option>
+			<option value='blindY'>Blind Y</option>
+			<option value='blindZ'>Blind Z</option>
+			<option value='cover'>Cover</option>
+			<option value='curtainX'>Curtain X</option>
+			<option value='curtainY'>Curtain Y</option>
+			<option value='fade'>Fade</option>
+			<option value='fadeZoom'>Fade Zoom</option>
+			<option value='growX'>Grow X</option>
+			<option value='growY'>Grow Y</option>
+			<option value='none'>None</option>
+			<option value='scrollUp'>Scroll Up</option>
+			<option value='scrollDown'>Scroll Down</option>
+			<option value='scrollLeft'>Scroll Left</option>
+			<option value='scrollRight'>Scroll Right</option>
+			<option value='scrollHorz'>Scroll Horizontal</option>
+			<option value='scrollVert'>Scroll Vertical</option>
+			<option value='shuffle'>Shuffle</option>
+			<option value='slideX'>Slide X</option>
+			<option value='slideY'>Slide Y</option>
+			<option value='toss'>Toss</option>
+			<option value='turnUp'>Turn Up</option>
+			<option value='turnDown'>Turn Down</option>
+			<option value='turnLeft'>Turn Left</option>
+			<option value='turnRight'>Turn Right</option>
+			<option value='uncover'>Uncover</option>
+			<option value='wipe'>Wipe</option>
+			<option value='zoom'>Zoom</option>
+		</field>
+		
+		<field type="text" name="timeout" label="Slide Timeout" description="Time between slide changes" default="4500" />
+		<field type="text" name="speed" label="Transition Speed" description="Transition Speed" default="1000" />
+		<field type="text" name="delay" label="First Delay" description="Additional delay applied to the first transition" default="0" />
+		
+		<field type="list" name="fit" label="Fit Contents" default="1" description="Set to yes if you wish to have your photos automatically resize to the given slideshow width and height." class="" size="">
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="spacer" name="break2" hr="true" />
+		
+		<field type="list" name="buildArrows" label="Include Navigation Arrows" default="1" description="If true, builds the forwards and backwards buttons" class="" size="">
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="list" name="buildNavigation" label="Include Navigation" default="1" description="If true, builds a list of anchor links to link to each panel" class="" size="">
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="list" name="buildThumbs" label="Include Thumbnails" default="-" description="If true, builds a list of thumbnails that act as a navigation" class="" size="">
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+
+		<field type="list" name="displayCaption" label="Display Caption" default="1" description="If yes, the description for the content will display as a caption" class="" size="">
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="list" name="pause" label="Pause on Hover" default="1" description="If true and the slideshow is active, the slideshow will pause on hover" class="" size="">
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="list" name="ordering" label="Ordering" default="0" description="How should the slides be ordered?">
+			<option value='0'>Package Ordering</option>
+			<option value='1'>Title (ascending)</option>
+			<option value='2'>Title (descending)</option>
+			<option value='3'>Random</option>
+		</field>
+		
+		<field type="list" name="linkTarget" label="Link Target" default="0" description="Where should links point?">
+			<option value='0'>Self window</option>
+			<option value='1'>New window</option>
+			<option value='2'>Parent window</option>
+		</field>
+		
+		<field type="list" name="theme" label="Theme" default="0" description="Use the component to add new themes.">
+			<option value='0'>Default</option>
+		</field>
+		
+		<field type="textarea" name="customCSS" label="Custom CSS Styles" default="" description="Enter any custom CSS. Global CSS styles set in component will be added before these styles, so you can override for this particular module in this area, but the global will be added even if you enter information here." />
+		
+		<field type="list" name="resizeContents" label="Resize Contents" default="1" description="If true, solitary images/objects in the panel will expand to fit the viewport" class="" size="">
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="spacer" name="break3" hr="true" />
+		
+		<field type="list" name="easing" label="Easing" default="">
+			<option value=''></option>
+			<option value='linear'>Linear</option>
+			<option value='swing'>Swing</option>
+		</field>
+		
+		<field type="list" name="easeIn" label="Ease In" default="">
+			<option value=''></option>
+			<option value='linear'>Linear</option>
+			<option value='swing'>Swing</option>
+		</field>
+		
+		<field type="list" name="easeOut" label="Ease Out" default="">
+			<option value=''></option>
+			<option value='linear'>Linear</option>
+			<option value='swing'>Swing</option>
+		</field>
+		
+		<field type="spacer" name="break4" hr="true" />
+		
+		<field type="media" name="borderTop" label="Top Border" default="" description="Select the image you want to use as the top border for the slideshow" class="" size="" />
+		<field type="text" name="borderTopWidth" label="Top Border Width" default="" description="Width of the top border. Leave blank for full-width." class="" size="" />
+		<field type="text" name="borderTopHeight" label="Top Border Height" default="" description="Height of top border" class="" size="" />
+		<field type="media" name="borderBottom" label="Bottom Border" default="" description="Select the image you want to use as the bottom border for the slideshow" class="" size="" />
+		<field type="text" name="borderBottomWidth" label="Bottom Border Width" default="" description="Width of the bottom border. Leave blank for full-width." class="" size="" />
+		<field type="text" name="borderBottomHeight" label="Bottom Border Height" default="" description="Height of bottom border" class="" size="" />
+		
+		
+		<!--
+		
+		OPTIONS FOR CYCLE, FOLLOWED BY PAST OPTIONS for WBTY_GALLERY!!
+		
+		
+		activePagerClass: 'activeSlide', // class name used for the active pager element 
+    after:         null,  // transition callback (scope set to element that was shown):  function(currSlideElement, nextSlideElement, options, forwardFlag) 
+    allowPagerClickBubble: false, // allows or prevents click event on pager anchors from bubbling 
+    animIn:        null,  // properties that define how the slide animates in 
+    animOut:       null,  // properties that define how the slide animates out 
+    autostop:      0,     // true to end slideshow after X transitions (where X == slide count) 
+    autostopCount: 0,     // number of transitions (optionally used with autostop to define X) 
+    backwards:     false, // true to start slideshow at last slide and move backwards through the stack 
+    before:        null,  // transition callback (scope set to element to be shown):     function(currSlideElement, nextSlideElement, options, forwardFlag) 
+    cleartype:     !$.support.opacity,  // true if clearType corrections should be applied (for IE) 
+    cleartypeNoBg: false, // set to true to disable extra cleartype fixing (leave false to force background color setting on slides) 
+    containerResize: 1,   // resize container to fit largest slide 
+    continuous:    0,     // true to start next transition immediately after current one completes 
+    cssAfter:      null,  // properties that defined the state of the slide after transitioning out 
+    cssBefore:     null,  // properties that define the initial state of the slide before transitioning in 
+	
+    end:           null,  // callback invoked when the slideshow terminates (use with autostop or nowrap options): function(options) 
+    fastOnEvent:   0,     // force fast transitions when triggered manually (via pager or prev/next); value == time in ms 
+    fit:           0,     // force slides to fit container 
+	
+    fxFn:          null,  // function used to control the transition: function(currSlideElement, nextSlideElement, options, afterCalback, forwardFlag) 
+	
+    manualTrump:   true,  // causes manual transition to stop an active transition instead of being ignored 
+    metaAttr:      'cycle',// data- attribute that holds the option data for the slideshow 
+    next:          null,  // element, jQuery object, or jQuery selector string for the element to use as event trigger for next slide 
+    nowrap:        0,     // true to prevent slideshow from wrapping 
+    onPagerEvent:  null,  // callback fn for pager events: function(zeroBasedSlideIndex, slideElement) 
+    onPrevNextEvent: null,// callback fn for prev/next events: function(isNext, zeroBasedSlideIndex, slideElement) 
+    pager:         null,  // element, jQuery object, or jQuery selector string for the element to use as pager container 
+    pagerAnchorBuilder: null, // callback fn for building anchor links:  function(index, DOMelement) 
+    pagerEvent:    'click.cycle', // name of event which drives the pager navigation 
+    pause:         0,     // true to enable "pause on hover" 
+    pauseOnPagerHover: 0, // true to pause when hovering over pager link 
+    prev:          null,  // element, jQuery object, or jQuery selector string for the element to use as event trigger for previous slide 
+    prevNextEvent:'click.cycle',// event which drives the manual transition to the previous or next slide 
+    random:        0,     // true for random, false for sequence (not applicable to shuffle fx) 
+    randomizeEffects: 1,  // valid when multiple effects are used; true to make the effect sequence random 
+    requeueOnImageNotLoaded: true, // requeue the slideshow if any image slides are not yet loaded 
+    requeueTimeout: 250,  // ms delay for requeue 
+    rev:           0,     // causes animations to transition in reverse (for effects that support it such as scrollHorz/scrollVert/shuffle) 
+    shuffle:       null,  // coords for shuffle animation, ex: { top:15, left: 200 } 
+    slideExpr:     null,  // expression for selecting slides (if something other than all children is required) 
+    slideResize:   1,     // force slide width/height to fixed size before every transition 
+	
+    speedIn:       null,  // speed of the 'in' transition 
+    speedOut:      null,  // speed of the 'out' transition 
+    startingSlide: 0,     // zero-based index of the first slide to be displayed 
+    sync:          1,     // true if in/out transitions should occur simultaneously 
+    timeout:       4000,  // milliseconds between slide transitions (0 to disable auto advance) 
+    timeoutFn:     null,  // callback for determining per-slide timeout value:  function(currSlideElement, nextSlideElement, options, forwardFlag) 
+    updateActivePagerLink: null, // callback fn invoked to update the active pager link (adds/removes activePagerClass style) 
+	
+	
+		
+		<field type="text" name="forwardText" label="Forward Text" default="" description="Usually hidden by CSS and replaced with an image" class="" size="" />
+		<field type="text" name="backText" label="Back Text" default="" description="Usually hidden by CSS and replaced with an image" class="" size="" />
+		<field type="list" name="enableLinks" label="Enable Links" default="1" description="If yes, content links will be enabled" class="" size="">
+			
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		<field type="list" name="displayCaption" label="Display Caption" default="1" description="If yes, the description for the content will display as a caption" class="" size="">
+			
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		<field type="list" name="captionPos" label="Caption Position" default="bottom" description="If caption is displayed, this option controls where it displays" class="" size="">
+			
+			<option value='bottom'>Bottom</option>
+			<option value='top'>Top</option>
+			<option value='left'>Left</option>
+			<option value='right'>Right</option>
+			<option value='center'>Center</option>
+		</field>
+		
+		<field type="list" name="useBorders" label="Include Borders" default="0" description="If true, then you may upload and choose to use certain images as top and bottom borders for the slideshow" class="" size="">
+		
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		
+		<field type="list" name="autoPlay" label="Autoplay" default="1" description="Dictate whether the slideshow starts playing by itself." class="" size="">
+			
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		<field type="list" name="startStopped" label="Start Stopped" default="1" description="If true, slideshow does not autoplay on load" class="" size="">
+			
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		<field type="list" name="resumeOnVideoEnd" label="Resume on Video End" default="1" description="If true and the slideshow is active and a youtube video is playing, it will pause the autoplay until the video has completed" class="" size="">
+			
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		<field type="list" name="stopAtEnd" label="Stop at End" default="0" description="If true and the slideshow is active, the slideshow will stop on the last page" class="" size="">
+			
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		<field type="list" name="playRtl" label="Play Right to Left" default="0" description="If true, the slideshow will move right-to-left" class="" size="">
+			
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="text" name="startText" label="Start Text" default="Start" description="Start button text" class="" size="" />
+		<field type="text" name="stopText" label="Stop Text" default="Stop" description="Stop button text" class="" size="" />
+		<field type="text" name="delay" label="Delay" default="3000" description="How long between slideshow transitions in AutoPlay mode (in milliseconds, 1 second = 1000 milliseconds)" class="" size="" />
+		<field type="text" name="animationTime" label="Animation Time" default="600" description="How long the slideshow transition takes (in milliseconds, 1 second = 1000 milliseconds)" class="" size="" />
+		
+	-->
+	</fieldset>
+
+	<fieldset name="permissions"
+		description="JCONFIG_PERMISSIONS_DESC"
+		label="JCONFIG_PERMISSIONS_LABEL">
+
+		<field name="rules" type="rules"
+			component="com_wbty_gallery"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+	</fieldset>
+
+</config>

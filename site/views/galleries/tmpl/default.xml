@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Galleries" option="Display a set of galleries.">
+		<message>
+			<![CDATA[COM_WBTY_SLIDER_GALLERIES_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	<fields name="params">
+		<fieldset name="basic">
+			<field type="radio" name="base_filter" label="Base Filter" default="1">
+				<option value="1">Include Selected Categories</option>
+				<option value="2">Exclude Selected Categories</option>
+			</field>
+
+			<field type="category" name="galleries" multiple="true" label="COM_WBTY_SLIDER_GALLERIES_VIEW_GALLERIES_LABEL" description="COM_WBTY_SLIDER_GALLERIES_VIEW_GALLERIES_DESC" extension="com_wbty_gallery" />
+
+			<field type="text" name="limit" label="Category Limit" default="0" filter="int" />
+			
+			<field name="children" type="list"
+				description="COM_WBTY_SLIDER_GALLERIES_CHILDREN_DESC"
+				label="COM_WBTY_SLIDER_GALLERIES_CHILDREN_LABEL"
+				default="0"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="exclude_parents" type="list"
+				description="COM_WBTY_SLIDER_GALLERIES_EXCLUDE_PARENTS_DESC"
+				label="COM_WBTY_SLIDER_GALLERIES_EXCLUDE_PARENTS_LABEL"
+				default="0"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field type="list" name="orderby" label="Order By" default="alpha">
+				<option value="alpha">Alphabetically, by Title</option>
+				<option value="date">Newest Category</option>
+			</field>
+			
+			<field type="list" name="gallery_cover" label="COM_WBTY_SLIDER_GALLERIES_VIEW_GALLERY_COVER_LABEL" description="COM_WBTY_SLIDER_GALLERIES_VIEW_GALLERY_COVER_DESC" default="random">
+				<option value="random">Random gallery image</option>
+				<option value="first">First photo from gallery</option>
+			</field>
+
+			<field type="text" 
+				name="columns"
+				default="3" 
+				label="COM_WBTY_GALLERY_GALLERIES_VIEW_COLUMNS_LABEL" 
+				description="COM_WBTY_GALLERY_GALLERIES_VIEW_COLUMNS_DESC" 
+				filter="integer" />
+				
+			<field type="text" 
+				name="menu_item"
+				label="COM_WBTY_GALLERY_GALLERIES_VIEW_MENU_ITEM" 
+				description="COM_WBTY_GALLERY_GALLERIES_VIEW_MENU_ITEM_DESC"
+				fileter="integer" />
+				
+		</fieldset>
+	</fields>
+</metadata>

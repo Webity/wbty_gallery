@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="bulkfields">
+
+		  <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+				readonly="true" class="readonly"
+				description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       
+				<field type="category" extension="com_wbty_gallery" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_CATEGORY" name="category" description="COM_WBTY_GALLERY_FORM_DESC_IMAGES_CATEGORY" filter="safehtml">
+					<option value="">Uncategorized</option>
+				</field>
+				
+				<field type="checkbox" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_FOR_SALE" name="for_sale" value="1" />
+				<field type="sql" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_PRICING_SET" name="pricing_set" query="SELECT id, name FROM #__wbty_gallery_pricing_sets WHERE state=1 ORDER BY ordering" value_field="name" key_field="id" description="COM_WBTY_GALLERY_FORM_DESC_IMAGES_PRICING_SET" sql_value="INT(11)" />
+				
+         <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1">
+                <option value="1">JPUBLISHED</option>
+                <option value="0">JUNPUBLISHED</option>
+            </field> 
+
+
+
+	</fieldset>
+	
+</form>

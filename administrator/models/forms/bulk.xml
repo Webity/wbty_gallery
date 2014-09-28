@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="image">
+		<fieldset name="bulkfields">
+
+			  <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+					readonly="true" class="readonly"
+					description="JGLOBAL_FIELD_ID_DESC" /> 
+
+	      	 <field type="text" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_IMAGE" name="image" description="COM_WBTY_GALLERY_FORM_DESC_IMAGES_IMAGE" required="true" readonly="true" />
+			 
+			 <field type="text" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_NAME" name="name" description="COM_WBTY_GALLERY_FORM_DESC_IMAGES_NAME" required="true" />
+
+		</fieldset>
+	</fields>
+</form>

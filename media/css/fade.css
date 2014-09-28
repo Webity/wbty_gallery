@@ -1,0 +1,4 @@
+.wbty_gallery_module > ul {margin: 0;}
+.wbty_gallery_module .navigation {position: absolute; z-index: 50; background: transparent url('../img/arrow-left.png') 50% 50% no-repeat; height: 41px; width: 41px; cursor: pointer; text-indent: -9999px; overflow: hidden; margin: 0 0 0 20px; opacity: 0.4; filter: alpha(opacity=50); transition: opacity .5s; -webkit-transition: opacity .5s; -moz-transition: opacity .5s;}
+.wbty_gallery_module #next-button {right: 0; background-image: url('../img/arrow-right.png'); margin: 0 20px 0 0;}
+.wbty_gallery_module .navigation:hover {opacity: 1; filter: alpha(opacity=100);}

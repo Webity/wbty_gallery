@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Slideshow Layout" option="com_wbtyslider_slider_view_default_option">
+		<help key = "JHELP_MENUS_MENU_ITEM_WBTYSLIDER_SLIDER"	/>
+		<message>
+			<![CDATA[com_wbtyslider_slider_view_default_desc]]>
+		</message>
+	</layout>
+	<config><fields name="params"><fieldset name="basic" label="basic">
+
+  	<field type="sql" name="package" label="Select Category*" description="Select the content package to use for this slider. Create a new package in the WBTY Gallery Component." query="SELECT id, title FROM #__categories WHERE published=1 AND extension='com_wbty_gallery' ORDER BY title ASC" key_field="id" value_field="title">
+		<option value="">Uncategorized</option>
+	</field>
+
+		<field type="list" name="includeJquery" label="Include jQuery" default="-" description="jQuery is required, but may already be included in your template.">
+			<option value='-'>Use Global</option>
+			<option value='0'>No</option>
+			<option value='1'>Yes</option>
+		</field>
+		<field type="list" name="jqueryMethod" label="Load jQuery Method" default="-" description="Load a local or CDN version?">
+			<option value='-'>Use Global</option>
+			<option value='0'>Google CDN</option>
+			<option value='1'>Local Copy</option>
+		</field>
+		
+		<field type="spacer" name="break1" hr="true" />
+		
+		<field type="text" name="width" label="Width" default="" description="Width of Slider" class="" size="" />
+		<field type="text" name="height" label="Height" default="" description="Height of Slider - leave empty for auto height" class="" size="" />
+		
+		<field type="list" name="fx" label="Animation Type" default="-" description="Sets the transition between slides" class="" size="">
+			<option value='-'>Use Global</option>
+			<option value='blindX'>Blind X</option>
+			<option value='blindY'>Blind Y</option>
+			<option value='blindZ'>Blind Z</option>
+			<option value='cover'>Cover</option>
+			<option value='curtainX'>Curtain X</option>
+			<option value='curtainY'>Curtain Y</option>
+			<option value='fade'>Fade</option>
+			<option value='fadeZoom'>Fade Zoom</option>
+			<option value='growX'>Grow X</option>
+			<option value='growY'>Grow Y</option>
+			<option value='none'>None</option>
+			<option value='scrollUp'>Scroll Up</option>
+			<option value='scrollDown'>Scroll Down</option>
+			<option value='scrollLeft'>Scroll Left</option>
+			<option value='scrollRight'>Scroll Right</option>
+			<option value='scrollHorz'>Scroll Horizontal</option>
+			<option value='scrollVert'>Scroll Vertical</option>
+			<option value='shuffle'>Shuffle</option>
+			<option value='slideX'>Slide X</option>
+			<option value='slideY'>Slide Y</option>
+			<option value='toss'>Toss</option>
+			<option value='turnUp'>Turn Up</option>
+			<option value='turnDown'>Turn Down</option>
+			<option value='turnLeft'>Turn Left</option>
+			<option value='turnRight'>Turn Right</option>
+			<option value='uncover'>Uncover</option>
+			<option value='wipe'>Wipe</option>
+			<option value='zoom'>Zoom</option>
+		</field>
+		
+		<field type="text" name="timeout" label="Slide Timeout" description="Time between slide changes" default="" />
+		<field type="text" name="speed" label="Transition Speed" description="Transition Speed" default="" />
+		<field type="text" name="delay" label="First Delay" description="Additional delay applied to the first transition" default="" />
+		
+		<field type="list" name="fit" label="Fit Contents" default="-" description="Set to yes if you wish to have your photos automatically resize to the given slideshow width and height." class="" size="">
+			<option value='-'>Use Global</option>
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="spacer" name="break2" hr="true" />
+		
+		<field type="list" name="buildArrows" label="Include Navigation Arrows" default="-" description="If true, builds the forwards and backwards buttons" class="" size="">
+			<option value='-'>Use Global</option>
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="list" name="buildNavigation" label="Include Navigation" default="-" description="If true, builds a list of anchor links to link to each panel" class="" size="">
+			<option value='-'>Use Global</option>
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="list" name="buildThumbs" label="Include Thumbnails" default="-" description="If true, builds a list of thumbnails that act as a navigation" class="" size="">
+			<option value='-'>Use Global</option>
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+
+		<field type="list" name="displayCaption" label="Display Caption" default="1" description="If yes, the description for the content will display as a caption" class="" size="">
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="list" name="pause" label="Pause on Hover" default="-" description="If true and the slideshow is active, the slideshow will pause on hover" class="" size="">
+			<option value='-'>Use Global</option>
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="list" name="ordering" label="Ordering" default="-" description="How should the slides be ordered?">
+			<option value='-'>Use Global</option>
+			<option value='0'>Package Ordering</option>
+			<option value='1'>Title (ascending)</option>
+			<option value='2'>Title (descending)</option>
+			<option value='3'>Random</option>
+		</field>
+		
+		<field type="list" name="linkTarget" label="Link Target" default="-" description="Where should links point?">
+			<option value='-'>Use Global</option>
+			<option value='0'>Self window</option>
+			<option value='1'>New window</option>
+			<option value='2'>Parent window</option>
+		</field>
+		
+		<field type="list" name="theme" label="Theme" default="-" description="Use the component to add new themes.">
+			<option value='-'>Use Global</option>
+			<option value='0'>Default</option>
+		</field>
+		
+		<field type="textarea" name="customCSS" label="Custom CSS Styles" default="" description="Enter any custom CSS. Global CSS styles set in component will be added before these styles, so you can override for this particular module in this area, but the global will be added even if you enter information here." />
+		
+		<field type="list" name="resizeContents" label="Resize Contents" default="-" description="If true, solitary images/objects in the panel will expand to fit the viewport" class="" size="">
+			<option value='-'>Use Global</option>
+			<option value='1'>Yes</option>
+			<option value='0'>No</option>
+		</field>
+		
+		<field type="spacer" name="break3" hr="true" />
+		
+		<field type="list" name="easing" label="Easing" default="-">
+			<option value='-'>Use Global</option>
+			<option value='linear'>Linear</option>
+			<option value='swing'>Swing</option>
+		</field>
+		
+		<field type="list" name="easeIn" label="Ease In" default="-">
+			<option value='-'>Use Global</option>
+			<option value='linear'>Linear</option>
+			<option value='swing'>Swing</option>
+		</field>
+		
+		<field type="list" name="easeOut" label="Ease Out" default="-">
+			<option value='-'>Use Global</option>
+			<option value='linear'>Linear</option>
+			<option value='swing'>Swing</option>
+		</field>
+		
+		<field type="spacer" name="break4" hr="true" />
+		
+		<field type="media" name="borderTop" label="Top Border" default="" description="Select the image you want to use as the top border for the slideshow" class="" size="" />
+		<field type="text" name="borderTopWidth" label="Top Border Width" default="" description="Width of the top border. Leave blank for full-width." class="" size="" />
+		<field type="text" name="borderTopHeight" label="Top Border Height" default="" description="Height of top border" class="" size="" />
+		<field type="media" name="borderBottom" label="Bottom Border" default="" description="Select the image you want to use as the bottom border for the slideshow" class="" size="" />
+		<field type="text" name="borderBottomWidth" label="Bottom Border Width" default="" description="Width of the bottom border. Leave blank for full-width." class="" size="" />
+		<field type="text" name="borderBottomHeight" label="Bottom Border Height" default="" description="Height of bottom border" class="" size="" />
+		
+
+  </fieldset></fields></config>
+</metadata>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="image">
+        <fieldset name="image">
+
+            <field name="id" type="hidden" default="0" class="id" /> 
+    
+    		<field type="text" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_NAME" name="name" filter="safehtml" required="true" class="default_col" />
+    		<field type="media" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_IMAGE" name="image" description="COM_WBTY_GALLERY_FORM_DESC_IMAGES_IMAGE" preview="true" />
+    		<field type="editor" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_CAPTION" name="caption" filter="safehtml" buttons="false" />
+    		<field type="category" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_CATEGORY" name="category" extension="com_wbty_gallery" show_root="safehtml" default="" description="COM_WBTY_GALLERY_FORM_DESC_IMAGES_CATEGORY" required="true" />
+    		<field type="menuitem" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_MENU_LINK" name="menu_link" filter="safehtml">
+                <option></option>
+            </field>
+            <field type="text" name="custom_menu_link" label="External Link" description="Leave blank to use Menu link or to not link." />
+
+            <field name="state" type="hidden" default="1" /> 
+
+            <field name="checked_out" type="hidden" filter="unset" />
+            <field name="checked_out_time" type="hidden" filter="unset" />
+            
+            <field name="modified_by" type="hidden" filter="integer" overwrite="true" />
+            <field name="modified_time" type="hidden" filter="safehtml" overwrite="true" />
+
+        </fieldset>
+		
+		<fieldset name="metadata">
+			<field name="page_heading" type="text"
+				label="COM_WBTY_GALLERY_FORM_LBL_PAGE_HEADING"
+				description="COM_WBTY_GALLERY_FORM_DESC_PAGE_HEADING" />
+				
+			<field name="metadesc" type="textarea"
+				label="JFIELD_META_DESCRIPTION_LABEL" description="JFIELD_META_DESCRIPTION_DESC"
+				rows="3" cols="40" />
+
+			<field name="metakey" type="textarea"
+				label="JFIELD_META_KEYWORDS_LABEL" description="JFIELD_META_KEYWORDS_DESC"
+				rows="3" cols="40" />
+		</fieldset>
+
+        <fieldset name="pricing">
+            <field type="checkbox" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_FOR_SALE" name="for_sale" />
+            <field type="list" label="COM_WBTY_GALLERY_FORM_LBL_IMAGES_PRICING_SET" name="pricing_set" description="COM_WBTY_GALLERY_FORM_DESC_IMAGES_PRICING_SET" />
+        </fieldset>
+    </fields>
+</form>
